@@ -32,6 +32,7 @@ class ComposerStaticInitbea319e7be27e06ee3cf123af1316589
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'b33e3d135e5d9e47d845c576147bda89' => __DIR__ . '/..' . '/php-di/php-di/src/functions.php',
         '689b08b7620712b04324ecd7ed167c6b' => __DIR__ . '/..' . '/yahnis-elsts/plugin-update-checker/load-v4p10.php',
+        '48483d6c44b015b6d6d681c009d084a7' => __DIR__ . '/../..' . '/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -2598,9 +2599,11 @@ class ComposerStaticInitbea319e7be27e06ee3cf123af1316589
         'Psr\\SimpleCache\\CacheException' => __DIR__ . '/..' . '/psr/simple-cache/src/CacheException.php',
         'Psr\\SimpleCache\\CacheInterface' => __DIR__ . '/..' . '/psr/simple-cache/src/CacheInterface.php',
         'Psr\\SimpleCache\\InvalidArgumentException' => __DIR__ . '/..' . '/psr/simple-cache/src/InvalidArgumentException.php',
+        'Reviewsvanklanten\\Helpers\\Config' => __DIR__ . '/../..' . '/src/Helpers/Config.php',
         'Reviewsvanklanten\\Helpers\\Settings' => __DIR__ . '/../..' . '/src/Helpers/Settings.php',
         'Reviewsvanklanten\\Installers\\DeInstaller' => __DIR__ . '/../..' . '/src/Installers/DeInstaller.php',
         'Reviewsvanklanten\\Installers\\Installer' => __DIR__ . '/../..' . '/src/Installers/Installer.php',
+        'Reviewsvanklanten\\Models\\Review' => __DIR__ . '/../..' . '/src/Models/Review.php',
         'Reviewsvanklanten\\Models\\Site' => __DIR__ . '/../..' . '/src/Models/Site.php',
         'Reviewsvanklanten\\ReviewPlugin' => __DIR__ . '/../..' . '/src/ReviewPlugin.php',
         'Reviewsvanklanten\\Settings\\ApiKey' => __DIR__ . '/../..' . '/src/Settings/ApiKey.php',

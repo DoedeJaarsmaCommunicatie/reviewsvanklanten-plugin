@@ -21,6 +21,9 @@
     "autoload": {
         "psr-4": {
             "Reviewsvanklanten\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     }
 }
