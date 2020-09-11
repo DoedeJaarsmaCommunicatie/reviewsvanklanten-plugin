@@ -2,28 +2,20 @@
 
 namespace Reviewsvanklanten\Settings;
 
-use function Reviewsvanklanten\setting;
+use Reviewsvanklanten\Helpers\View;
 
-class SiteHash implements Setting
+class SiteHash extends AbstractSetting
 {
     public const T_S_KEY = 'rvk_site_hash';
 
-    public static function get_key($append = false)
-    {
-        if ($append) {
-            return static::T_S_KEY . $append;
-        }
-
-        return static::T_S_KEY;
-    }
-
     public static function callback()
     {
-        $value = setting(static::T_S_KEY);
-        ?>
-        <input type="text" value="<?=$value?>" name="<?=static::T_S_KEY?>" />
-        <p class="description">Deze code kan je vinden in jouw dashboard.</p>
-        <?php
+        $value = static::get_value();
+        View::render('/settings/text_input', [
+            'value' => $value,
+            'name' => static::T_S_KEY,
+            'description' => 'Deze code kan je vinden in jouw dashboard.'
+        ]);
     }
 }
 

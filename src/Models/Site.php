@@ -3,9 +3,7 @@
 namespace Reviewsvanklanten\Models;
 
 use Illuminate\Support\Arr;
-use Reviewsvanklanten\Helpers\Config;
 use Reviewsvanklanten\Settings\ApiKey;
-use Reviewsvanklanten\Helpers\Settings;
 use Reviewsvanklanten\Settings\SiteHash;
 use Symfony\Component\HttpClient\HttpClient;
 
@@ -15,6 +13,7 @@ use function Reviewsvanklanten\Config;
 class Site
 {
     public const T_K_TRANSIENT = 'rvk-site-cache';
+    public const T_K_PROPERTY_TYPE = 'COMPANY';
 
     public $id;
     public $name;
@@ -51,7 +50,7 @@ class Site
         $this->id = $body['id'];
         $this->name = $body['name'];
         $this->uuid = $body['uuid'];
-        $this->description = $body['description'];
+        $this->description = $body['description']?? null;
 
         foreach ($body['reviews'] as $review) {
             $this->reviews[] = new Review($review);

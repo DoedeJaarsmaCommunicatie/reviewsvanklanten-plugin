@@ -1,0 +1,32 @@
+<div id="review_form">
+    <div id="respond" class="comment-respond">
+        <span id="reply-title" class="comment-reply-title">
+            {{{reply_title}}}
+        </span>
+
+        <form action="{{submit.link}}" method="POST">
+            <input type="hidden" name="redirect_url" id="redirect_url" value="{{redirect_url}}">
+            <input type="hidden" name="property" id="property" value="{{property_uuid}}">
+            <input type="hidden" name="_method" id="_method" value="POST" />
+
+            <label for="email">E-mailadres</label>
+            <input type="email" name="email" id="email" placeholder="E-mailadres" value="{{user.email}}" />
+
+            <label for="name">Naam</label>
+            <input type="text" name="name" id="name" placeholder="Naam" value="{{user.name}}" />
+
+            <label for="score">Score</label>
+            <span class="re-star-input"></span>
+            <noscript>
+                <input type="number" min="1" max="10" step=".5" name="score" id="score" />
+            </noscript>
+            <label for="remarks">Je beoordeeling</label>
+            <textarea name="remarks" id="remarks"></textarea>
+
+            <button type="submit">{{submit.label}}</button>
+        </form>
+    </div>
+</div>
+
+<script src="{{assets.script}}"></script>
+<link type="text/css" rel="stylesheet" href="{{assets.style}}">

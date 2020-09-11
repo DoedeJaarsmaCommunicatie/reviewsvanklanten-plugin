@@ -1,0 +1,40 @@
+<article class="rvk--review__review">
+    <aside class="rvk--review__score--wrapper">
+        <span class="re-star-output"></span>
+        <h5 class="rvk--review__score">
+            {{review.get_score}}
+        </h5>
+    </aside>
+    <main class="rvk--review__content--wrapper">
+        <strong class="rvk--review__author">
+            {{review.get_name_or_email}}
+        </strong>
+        <p class="rvk--review__content">
+            {{review.get_remarks}}
+        </p>
+    </main>
+</article>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{product.get_title}}",
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "{{review.get_score}}",
+      "bestRating": "10"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "{{review.get_name_or_email}}"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{property.get_average}}",
+    "reviewCount": "{{property.reviewCount}}"
+  }
+}
+</script>

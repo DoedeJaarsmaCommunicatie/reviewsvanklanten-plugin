@@ -50,6 +50,12 @@ class Review
         return $this->name?? '';
     }
 
+    public function get_name_or_email()
+    {
+        return $this->get_name()?? $this->get_email();
+    }
+
+
     public function get_uuid()
     {
         return $this->uuid;

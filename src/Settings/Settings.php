@@ -12,6 +12,7 @@ class Settings
 	{
 		register_setting(static::generate_id(false), ApiKey::get_key());
 		register_setting(static::generate_id(false), SiteHash::get_key());
+        register_setting(static::generate_id(false), UseCustomTemplate::get_key());
 
 		add_settings_section(
 			static::generate_id('_base_section'),
@@ -32,6 +33,14 @@ class Settings
 		        static::generate_id(SiteHash::get_key('field')),
             'Site Hash',
             [SiteHash::class, 'callback'],
+            static::generate_id(false),
+            static::generate_id('_base_section')
+        );
+
+		add_settings_field(
+            static::generate_id(UseCustomTemplate::get_key('field')),
+            'Gebruik onze templates',
+            [UseCustomTemplate::class, 'callback'],
             static::generate_id(false),
             static::generate_id('_base_section')
         );
@@ -68,7 +77,7 @@ class Settings
                         ?>
                     </form>
             </div>
-<?php
+        <?php
     }
 
 	/**

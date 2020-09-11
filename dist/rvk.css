@@ -1,0 +1,23 @@
+.rvk--review__review {
+    display: flex;
+}
+.rvk--review__score--wrapper {
+    flex: 0 1 180px;
+    display: flex;
+    flex-direction: column;
+}
+.rvk--review__score--wrapper .re-star-output {
+    margin: auto;
+}
+.rvk--review__score--wrapper .rvk--review__score {
+    margin: auto;
+}
+.rvk--review__content--wrapper {
+    flex: 1 1 auto;
+    border-left: 1px solid var(--rvk-border-color, #333);
+    padding: 2rem;
+}
+p.rvk--review__content {
+    margin-bottom: 0;
+}
+
