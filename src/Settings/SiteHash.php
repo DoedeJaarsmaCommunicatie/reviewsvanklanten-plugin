@@ -17,5 +17,10 @@ class SiteHash extends AbstractSetting
             'description' => 'Deze code kan je vinden in jouw dashboard.'
         ]);
     }
+
+    public static function title(): string
+    {
+        return 'Site Hash';
+    }
 }
 

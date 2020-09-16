@@ -6,6 +6,7 @@ use Mustache_Engine;
 use Reviewsvanklanten\Settings\Settings;
 use Reviewsvanklanten\Controllers\Internal\Updates;
 use Reviewsvanklanten\Controllers\CustomProductProps;
+use Reviewsvanklanten\Controllers\ConnectOrderWebhook;
 use Reviewsvanklanten\Controllers\CustomReviewTemplate;
 
 class ReviewPlugin {
@@ -64,5 +65,6 @@ class ReviewPlugin {
     protected function public_hooks()
     {
         CustomReviewTemplate::bootstrap();
+        ConnectOrderWebhook::bootstrap();
 	}
 }

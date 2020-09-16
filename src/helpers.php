@@ -4,6 +4,7 @@ namespace Reviewsvanklanten;
 
 use Reviewsvanklanten\Models\Site;
 use Reviewsvanklanten\Helpers\View;
+use Reviewsvanklanten\Helpers\Http;
 use Reviewsvanklanten\Helpers\Config;
 use Reviewsvanklanten\Models\Property;
 use Reviewsvanklanten\Helpers\Settings;
@@ -76,7 +77,20 @@ if (!function_exists(__NAMESPACE__ . 'render_view')) {
 }
 
 if (!function_exists(__NAMESPACE__ . 'view')) {
+    /**
+     * @param string $path
+     * @param array  $data
+     *
+     * @return string
+     */
     function view(string $path, array $data = []) {
         return View::make(...func_get_args());
+    }
+}
+
+if (!function_exists(__NAMESPACE__ . '')) {
+    function http_client()
+    {
+        return Http::client();
     }
 }

@@ -13,14 +13,19 @@ class UseCustomTemplate extends AbstractSetting
     public static function callback()
     {
         View::render('/settings/checkbox_input', [
-            'value' => static::get_value(),
+            'value' => static::get_value(true),
             'name' => static::T_S_KEY,
             'description' => 'Met deze instellingen gebruik je de standaard Reviews van Klanten templates.'
         ]);
     }
 
-    public static function get_value()
+    public static function get_value($fallback = null)
     {
-        return filter_var(setting(static::T_S_KEY, true), FILTER_VALIDATE_BOOLEAN);
+        return filter_var(setting(static::T_S_KEY, $fallback?? true), FILTER_VALIDATE_BOOLEAN);
+    }
+
+    public static function title(): string
+    {
+        return 'Gebruik onze templates';
     }
 }

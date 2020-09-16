@@ -5,8 +5,13 @@ Plugin Name: Reviews van Klanten koppeling
 Plugin URI: https://reviewsvanklanten.nl/plugin
 Description: Deze plugin legt de koppeling tussen jouw WooCommerce winkel en Reviews van Klanten.
 Version: 1.0
+requires at least: 5.1
+requires PHP: 7.3
 Author: Reviews van Klanten team
 License: MIT
+
+WC requires at least: 4.0
+WC tested up to: 4.5
 */
 
 use Reviewsvanklanten\ReviewPlugin;

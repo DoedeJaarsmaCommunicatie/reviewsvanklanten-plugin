@@ -17,4 +17,9 @@ class ApiKey extends AbstractSetting
             'description' => 'Deze api key kan je aanmaken in jouw dashboard als token.'
         ]);
 	}
+
+	public static function title(): string
+    {
+        return 'API Key';
+    }
 }
