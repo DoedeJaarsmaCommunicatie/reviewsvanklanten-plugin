@@ -1,21 +1,27 @@
-.rvk--review__review {
-    display: flex;
-}
 .rvk--review__score--wrapper {
-    flex: 0 1 180px;
+    flex: 0 1 300px;
     display: flex;
     flex-direction: column;
 }
 .rvk--review__score--wrapper .rvk--review__score {
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
 }
 .rvk--review__content--wrapper {
     flex: 1 1 auto;
-    border-left: 1px solid var(--rvk-border-color, #333);
     padding: 2rem;
 }
-
 p.rvk--review__content {
     margin-bottom: 0;
+}
+.re-star-output {
+    margin-top: auto;
+    text-align: center;
+}
+@media screen and (min-width: 1024px) {
+    .rvk--review__review {
+        display: flex;
+    }
 }
 

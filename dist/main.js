@@ -10283,7 +10283,7 @@
 				score: document.querySelector('.rvk--review__score').innerHTML,
 				color: '#f93'
 			}
-			),
+		),
 		document.querySelector('.re-star-output')
 	);
 

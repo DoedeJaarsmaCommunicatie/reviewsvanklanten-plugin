@@ -1,3 +1,4 @@
+import '../styles/rvk.css';
 import '@elderbraum/rvk-elements';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -20,6 +21,6 @@ ReactDOM.render(
 			score: document.querySelector('.rvk--review__score').innerHTML,
 			color: '#f93'
 		}
-		),
+	),
 	document.querySelector('.re-star-output')
 )

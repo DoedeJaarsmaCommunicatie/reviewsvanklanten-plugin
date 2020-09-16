@@ -81,7 +81,7 @@ do_action('rvk/reviews/before', $product, $property);
                     ],
                     'assets' => [
                         'script' => plugin_dir_url(RVK_FILE) . '/dist/main.js',
-                        'style' => plugin_dir_url(RVK_FILE) . '/dist/rvk.css'
+                        'style' => plugin_dir_url(RVK_FILE) . '/dist/main.css'
                     ],
                 ]);
 
