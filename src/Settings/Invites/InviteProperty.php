@@ -16,13 +16,13 @@ class InviteProperty extends AbstractSetting
         View::render('/settings/checkbox_input', [
             'value' => static::get_value(),
             'name' => static::T_S_KEY,
-            'description' => 'Kies er voor om producten te laten reviewen na aankoop.'
+            'description' => _x('Send a review invite after purchase for your company.', 'WP Admin Settings', 'reviews-van-klanten'),
         ]);
     }
 
     public static function title(): string
     {
-        return 'Stuur product review uitnodigingen';
+        return _x('Send invites on Product level', 'WP Admin Screen label', 'reviews-van-klanten');
     }
 
     public static function get_value($fallback = null)

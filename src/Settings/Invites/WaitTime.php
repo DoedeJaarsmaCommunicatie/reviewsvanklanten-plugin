@@ -14,12 +14,12 @@ class WaitTime extends AbstractSetting
         View::render('settings/text_input', [
             'value' => static::get_value(10),
             'name' => static::T_S_KEY,
-            'description' => 'Tijd in dagen vanaf bestelling tot uitnodiging.'
+            'description' => _x('Delay in days to send invite.', 'WP Admin Screen', 'reviews-van-klanten')
         ]);
     }
 
     public static function title(): string
     {
-        return 'Wacht tijd (dagen)';
+        return _x('Delay (days)', 'WP Admin Screen label', 'reviews-van-klanten');
     }
 }

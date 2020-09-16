@@ -15,7 +15,7 @@ class UseCustomTemplate extends AbstractSetting
         View::render('/settings/checkbox_input', [
             'value' => static::get_value(true),
             'name' => static::T_S_KEY,
-            'description' => 'Met deze instellingen gebruik je de standaard Reviews van Klanten templates.'
+            'description' => __('These settings apply our default templates.', 'reviews-van-klanten')
         ]);
     }
 
@@ -26,6 +26,6 @@ class UseCustomTemplate extends AbstractSetting
 
     public static function title(): string
     {
-        return 'Gebruik onze templates';
+        return __('Use our custom templates', 'reviews-van-klanten');
     }
 }

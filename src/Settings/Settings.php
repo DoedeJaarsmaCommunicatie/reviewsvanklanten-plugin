@@ -17,7 +17,7 @@ class Settings
 
 		add_settings_section(
 			static::generate_id('_base_section'),
-			'Reviews van Klanten',
+            __('Reviews van Klanten', 'reviews-van-klanten'),
 			[self::class, 'base_section_callback'],
 			static::generate_id(false)
 		);
@@ -48,8 +48,8 @@ class Settings
 	public static function register_menu_page(): void
     {
         add_options_page(
-            'Reviews van Klanten instellingen',
-            'Reviews van Klanten',
+            __('Reviews van Klanten settings', 'reviews-van-klanten'),
+            __('Reviews van Klanten', 'reviews-van-klanten'),
             'manage_options',
             static::generate_id('options_page'),
             [static::class, 'settings_page_callback']
@@ -58,9 +58,10 @@ class Settings
 
 	public static function base_section_callback(): void
 	{
-		?>
-		<h2>Gebruik deze instellingen om reviews te tonen en te plaatsen.</h2>
-		<?php
+	    printf(
+            '<h2>%s</h2>',
+            __('Use these settings to modify how reviews are processed', 'reviews-van-klanten')
+        );
 	}
 
 	public static function settings_page_callback(): void

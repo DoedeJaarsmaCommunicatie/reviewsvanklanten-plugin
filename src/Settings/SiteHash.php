@@ -14,13 +14,13 @@ class SiteHash extends AbstractSetting
         View::render('/settings/text_input', [
             'value' => $value,
             'name' => static::T_S_KEY,
-            'description' => 'Deze code kan je vinden in jouw dashboard.'
+            'description' => __('You can find this code in your dashboard.', 'reviews-van-klanten')
         ]);
     }
 
     public static function title(): string
     {
-        return 'Site Hash';
+        return __('Site Hash', 'reviews-van-klanten');
     }
 }
 

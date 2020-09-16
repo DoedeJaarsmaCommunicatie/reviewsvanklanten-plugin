@@ -21,8 +21,6 @@ class View
      */
     public static function make(string $path, array $data = [])
     {
-        $base_path = RVK_PLUGIN_DIR;
-
         if (Str::startsWith($path, 'views/')) {
             $path = Str::replaceFirst('views/', '', $path);
         }

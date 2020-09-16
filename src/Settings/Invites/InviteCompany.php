@@ -16,13 +16,13 @@ class InviteCompany extends AbstractSetting
         View::render('/settings/checkbox_input', [
             'value' => static::get_value(),
             'name' => static::T_S_KEY,
-            'description' => 'Laat jouw bedrijf beoordelen na het doen van een aankoop.'
+            'description' => _x('Send a review invite after purchase for your company.', 'WP Admin Settings', 'reviews-van-klanten')
         ]);
     }
 
     public static function title(): string
     {
-        return 'Stuur uitnodiging om bedrijf te beoordelen';
+        return _x('Send invites on Company level', 'WP Admin Screen label', 'reviews-van-klanten');
     }
 
     public static function get_value($fallback = null)

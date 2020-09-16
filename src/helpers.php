@@ -47,6 +47,11 @@ if (!function_exists(__NAMESPACE__ . 'get_site')) {
 if (!function_exists(__NAMESPACE__ . 'get_current_property')) {
     /**
      * @return Property|void
+     * @throws \Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface
+     * @throws \Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface
+     * @throws \Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface
+     * @throws \Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface
+     * @throws \Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface
      */
     function get_current_property() {
         return Property::make(get_queried_object_id());
@@ -58,6 +63,11 @@ if (!function_exists(__NAMESPACE__ . 'get_property')) {
      * @param int $id
      *
      * @return Property|void
+     * @throws \Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface
+     * @throws \Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface
+     * @throws \Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface
+     * @throws \Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface
+     * @throws \Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface
      */
     function get_property(int $id) {
         return Property::make($id);

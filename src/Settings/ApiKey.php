@@ -14,12 +14,12 @@ class ApiKey extends AbstractSetting
 	    View::render('settings/text_input', [
             'value' => $value,
             'name' => static::T_S_KEY,
-            'description' => 'Deze api key kan je aanmaken in jouw dashboard als token.'
+            'description' => _x('Generate an API key in your dashboard.', 'WP Admin Screen', 'reviews-van-klanten'),
         ]);
 	}
 
 	public static function title(): string
     {
-        return 'API Key';
+        return _x('API Key', 'WP Admin Screen label', 'reviews-van-klanten');
     }
 }
